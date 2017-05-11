@@ -10,6 +10,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,600" rel="stylesheet" type="text/css">
         <link rel="icon" type="image/png" href="{{ asset('/img/favicon.png') }}" />
+        <link href="{{ asset('/css/app.css') }}" type="text/css" rel="stylesheet">
         <!-- Styles -->
         <style>
             /* Move down content because we have a fixed navbar that is 50px tall */
@@ -90,6 +91,6 @@
     </div> <!-- /container -->
 
     <script src="{{ asset('/js/app.js') }}"></script>
-    
+
     </body>
 </html>
