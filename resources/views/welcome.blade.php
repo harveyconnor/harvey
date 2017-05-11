@@ -9,7 +9,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,600" rel="stylesheet" type="text/css">
-
+        <link rel="icon" type="image/png" href="{{ asset('/img/favicon.png') }}" />
         <!-- Styles -->
         <style>
             html, body {
