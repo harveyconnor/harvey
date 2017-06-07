@@ -6,7 +6,7 @@
  */
 
 require('./bootstrap');
-
+var VueResource = require('vue-resource');
 window.Vue = require('vue');
 
 /**
@@ -15,8 +15,8 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
-
+Vue.component('gallery-graphics', require('./components/Gallery/Graphics.vue'));
+Vue.use(VueResource);
 const app = new Vue({
     el: '#app'
 });
