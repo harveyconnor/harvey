@@ -20,8 +20,8 @@
         display: block;
         width: 80%;
         height: auto;
-        max-width: 500px;
-        max-height: 500px;
+        max-width: 800px;
+        max-height: 800px;
     }
 
     /* Caption of Modal Image (Image Text) - Same Width as the Image */
