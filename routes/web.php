@@ -13,9 +13,9 @@ Route::get('/about', function () {
 //})->name('gallery.web');
 
 Route::get('/gallery/graphics', 'GalleryController@showGraphics')->name('gallery.graphics');
-Auth::routes();
+//Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+//Route::get('/home', 'HomeController@index');
 
 Route::group(['middleware' => 'auth'],function(){
     Route::get('/gallery/graphics/new', 'GalleryController@showGraphicsForm')->name('gallery.graphics.new');
