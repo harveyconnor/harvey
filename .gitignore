@@ -27,3 +27,5 @@ Homestead.json
 .idea/modules.xml
 .idea/workspace.xml
 .idea/inspectionProfiles/
+
+.env
