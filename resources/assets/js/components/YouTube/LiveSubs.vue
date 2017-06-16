@@ -50,11 +50,9 @@
         ></i-odometer>
 
         <div id="myProgress">
-            <div id="myBar">{{ progress*100 }}%</div>
+            <div id="myBar">{{ progress * 100 }}%</div>
         </div>
         <h1 class="upper">Sub Goal: {{ goal.toLocaleString() }}</h1>
-        <br>
-        <input v-model="goal">
     </div>
 </template>
 
@@ -64,16 +62,15 @@
         components: {
             IOdometer
         },
-        props: ['channel'],
+        props: ['channel','goal'],
         data(){
             return {
                 subscribers: 0,
-                goal: 54450,
             }
         },
         methods: {
             loadSubs() {
-                $.get('/youtube/'+this.channel+'/live', function (response) {
+                $.get('/youtube/' + this.channel + '/live', function (response) {
                     this.subscribers = parseInt(response);
                 }.bind(this));
             }
@@ -81,19 +78,20 @@
         computed: {
             progress () {
                 let progress = 0;
-                if(this.subscribers/this.goal > 1){
+                if (this.subscribers / this.goal > 1) {
                     progress = 1;
-                }else{
-                    progress = this.subscribers/this.goal;
+                } else {
+                    progress = this.subscribers / this.goal;
                 }
                 progress = progress.toFixed(2);
 
-                $("#myBar").width(progress*100+"%");
+                $("#myBar").width(progress * 100 + "%");
 
                 return progress;
             },
         },
         created() {
+
             this.loadSubs();
 
             setInterval(function () {

@@ -2217,19 +2217,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: {
         IOdometer: __WEBPACK_IMPORTED_MODULE_0_vue_odometer___default.a
     },
-    props: ['channel'],
+    props: ['channel', 'goal'],
     data: function data() {
         return {
-            subscribers: 0,
-            goal: 54450
+            subscribers: 0
         };
     },
 
@@ -2256,6 +2253,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         }
     },
     created: function created() {
+
         this.loadSubs();
 
         setInterval(function () {
@@ -33572,23 +33570,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_vm._v(_vm._s(_vm.progress * 100) + "%")])]), _vm._v(" "), _c('h1', {
     staticClass: "upper"
-  }, [_vm._v("Sub Goal: " + _vm._s(_vm.goal.toLocaleString()))]), _vm._v(" "), _c('br'), _vm._v(" "), _c('input', {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.goal),
-      expression: "goal"
-    }],
-    domProps: {
-      "value": (_vm.goal)
-    },
-    on: {
-      "input": function($event) {
-        if ($event.target.composing) { return; }
-        _vm.goal = $event.target.value
-      }
-    }
-  })], 1)
+  }, [_vm._v("Sub Goal: " + _vm._s(_vm.goal.toLocaleString()))])], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
