@@ -29,7 +29,15 @@
 
     #myProgress {
         background-color: #f7f7f7;
-        border: 2px #e3e3e3 solid;
+        box-shadow: 3px 2px black;
+        max-width: 300px;
+    }
+
+    .upper {
+        font-family: 'Helvetica', 'Arial', sans-serif;
+        color: white;
+        text-shadow: 3px 2px black;
+        font-weight: bold;
     }
 
 </style>
@@ -43,8 +51,7 @@
         <div id="myProgress">
             <div id="myBar">{{ progress*100 }}%</div>
         </div>
-        <br>
-        <h1>Sub Goal: {{ goal }}</h1>
+        <h1 class="upper">Sub Goal: {{ goal.toLocaleString() }}</h1>
         <br>
         <input v-model="goal">
     </div>
