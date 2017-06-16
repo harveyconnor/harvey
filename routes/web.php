@@ -8,6 +8,11 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
+Route::get('/youtube/{channel}', 'YouTubeController@index')->name('youtube.index');
+Route::get('/youtube/{channel}/theme', 'YouTubeController@indexThemed')->name('youtube.theme');
+Route::get('/youtube/{channel}/data', 'YouTubeController@getChannelData')->name('youtube.data');
+Route::get('/youtube/{channel}/live', 'YouTubeController@subscriberCount')->name('youtube.live');
+
 //Route::get('/gallery/web', function () {
 //    return view('gallery.web');
 //})->name('gallery.web');

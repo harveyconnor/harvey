@@ -6,7 +6,7 @@
  */
 
 require('./bootstrap');
-var VueResource = require('vue-resource');
+
 window.Vue = require('vue');
 
 /**
@@ -16,7 +16,8 @@ window.Vue = require('vue');
  */
 
 Vue.component('gallery-graphics', require('./components/Gallery/Graphics.vue'));
-Vue.use(VueResource);
+Vue.component('youtube-live-subscribers', require('./components/YouTube/LiveSubs.vue'));
+
 const app = new Vue({
     el: '#app'
 });
