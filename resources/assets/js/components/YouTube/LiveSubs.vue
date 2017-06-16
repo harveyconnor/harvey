@@ -30,7 +30,7 @@
     #myProgress {
         background-color: #f7f7f7;
         box-shadow: 3px 2px black;
-        max-width: 300px;
+        max-width: 400px;
     }
 
     .upper {
