@@ -1,58 +1,46 @@
 <!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <!--Meta-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <link href="https://fonts.googleapis.com/css?family=Oswald:500" rel="stylesheet">
-
+    <!--Title-->
+    <title>Live Subscriber Count</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}" id="color-switcher">
+    <link rel="stylesheet" href="{{ asset('css/jquery.mCustomScrollbar.min.css') }}" id="color-switcher">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway|Righteous" rel="stylesheet">
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
-    <style>
-        body {
-            font-family: 'Helvetica', 'Arial', sans-serif;
-            background-color: #000;
-        }
-        h1 {
-            font-size: 3em;
-            color: white;
-            text-align: center;
-            text-shadow: 3px 2px black;
-            font-weight: bold;
-            margin-bottom: 2px;
-        }
-        p {
-            color: white;
-            text-align: center;
-            text-shadow: 3px 2px black;
-            font-weight: bold;
-            margin-top: 2px;
-        }
-        #subscribers {
-            width: 100%;
-            text-align: center;
-            float: left;
-            height: auto;
-            background: url("{!! $banner !!}");
-            background-size: contain;
-            background-repeat: no-repeat;
-            padding: 20px;
-        }
-    </style>
 </head>
 <body>
+<!--Hero-->
 <div id="app">
-    <div id="subscribers">
-        <h1>Live Subscriber Count</h1>
-        <p>{!! $title !!}</p>
-        <youtube-live-subscribers channel="{!! $channel !!}"></youtube-live-subscribers>
+    <div class="hero" id="particles-js">
+        <div class="centered">
+            <img class="img-responsive" src="{!! $banner !!}" alt="Live">
+            <h2 class="heading">{{ $title }}</h2>
+            <youtube-live-subscribers-theme channel="{!! $channel !!}"></youtube-live-subscribers-theme>
+            <div class="buttons">
+                <a id="subscribe-button" target="_blank" href="{{ url('http://www.youtube.com/channel/'.$channel) }}" class="button btn-round btn-ghost">View Channel</a>
+            </div>
+        </div>
+        <div class="social-text">
+            <a target="_blank" href="{{ url('http://www.twitter.com/Harvs_97') }}"><i class="fa fa-twitter"></i> Twitter</a>
+            <a target="_blank" href="{{ url('http://www.youtube.com/user/KommunityKOD') }}"><i class="fa fa-youtube-play"></i> YouTube</a>
+        </div>
     </div>
 </div>
+<!--Scripts-->
+<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/jquery.mCustomScrollbar.min.js') }}"></script>
 </body>
-<script src="{{ asset('/js/app.js') }}"></script>
 </html>

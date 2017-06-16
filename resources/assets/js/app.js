@@ -17,6 +17,7 @@ window.Vue = require('vue');
 
 Vue.component('gallery-graphics', require('./components/Gallery/Graphics.vue'));
 Vue.component('youtube-live-subscribers', require('./components/YouTube/LiveSubs.vue'));
+Vue.component('youtube-live-subscribers-theme', require('./components/YouTube/LiveSubsTheme.vue'));
 
 const app = new Vue({
     el: '#app'

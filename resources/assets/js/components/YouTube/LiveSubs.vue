@@ -62,7 +62,7 @@
         components: {
             IOdometer
         },
-        props: ['channel','goal'],
+        props: ['channel','goal','start'],
         data(){
             return {
                 subscribers: 0,
@@ -78,10 +78,10 @@
         computed: {
             progress () {
                 let progress = 0;
-                if (this.subscribers / this.goal > 1) {
+                if ((this.subscribers - this.start) / (this.goal - this.start) > 1) {
                     progress = 1;
                 } else {
-                    progress = this.subscribers / this.goal;
+                    progress = (this.subscribers - this.start) / (this.goal - this.start);
                 }
                 progress = progress.toFixed(2);
 

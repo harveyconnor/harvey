@@ -1,5 +1,7 @@
 {
   "/js/app.js": "/js/app.js",
   "/css/app.css": "/css/app.css",
-  "/css/style.css": "/css/style.css"
+  "/js/jquery.mCustomScrollbar.min.js": "/js/jquery.mCustomScrollbar.min.js",
+  "/css/style.css": "/css/style.css",
+  "/css/jquery.mCustomScrollbar.min.css": "/css/jquery.mCustomScrollbar.min.css"
 }

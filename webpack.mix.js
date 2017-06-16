@@ -12,5 +12,9 @@ const { mix } = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
+    .js('resources/assets/js/jquery.mCustomScrollbar.min.js', 'public/js')
     .sass('resources/assets/sass/app.scss', 'public/css')
-    .styles(['resources/assets/css/extra.css'], 'public/css/style.css');
+    .styles([
+        'resources/assets/css/extra.css'
+    ], 'public/css/style.css')
+    .styles(['resources/assets/css/jquery.mCustomScrollbar.min.css'],'public/css/jquery.mCustomScrollbar.min.css');

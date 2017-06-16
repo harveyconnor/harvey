@@ -17,7 +17,7 @@
 <body>
 <div id="app">
     <div id="subscribers">
-        <youtube-live-subscribers channel="{!! $channel !!}" goal="{!! Request::input('goal') !!}"></youtube-live-subscribers>
+        <youtube-live-subscribers channel="{!! $channel !!}" goal="{!! Request::input('goal') !!}" start="{!! Request::input('start') !!}"></youtube-live-subscribers>
     </div>
 </div>
 </body>
