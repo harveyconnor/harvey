@@ -2218,6 +2218,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -5861,7 +5862,7 @@ exports.push([module.i, "\n/* The Modal (background) */\n.modal {\n    display: 
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(8)();
-exports.push([module.i, "\n.odometer.odometer-theme-default[data-v-6d012a20] {\n    /*\n        Note font is glitched somewhat\n        The spacing changes when number changes\n    */\n    font-family: 'Helvetica', 'Arial', sans-serif;\n    color: white;\n    text-align: center;\n    text-shadow: 3px 2px black;\n    font-weight: bold;\n}\n.iOdometer[data-v-6d012a20] {\n    font-size: 8em;\n    margin: 0;\n}\n#myBar[data-v-6d012a20] {\n    width: 0;\n    height: 30px;\n    background-color: #4CAF50;\n    text-align: center; /* To center it horizontally (if you want) */\n    line-height: 30px; /* To center it vertically */\n    color: white;\n    font-family: 'Helvetica', 'Arial', sans-serif;\n    font-weight: bold;\n}\n#myProgress[data-v-6d012a20] {\n    background-color: #f7f7f7;\n    box-shadow: 3px 2px black;\n    max-width: 300px;\n}\n.upper[data-v-6d012a20] {\n    font-family: 'Helvetica', 'Arial', sans-serif;\n    color: white;\n    text-shadow: 3px 2px black;\n    font-weight: bold;\n}\n\n", ""]);
+exports.push([module.i, "\n.odometer.odometer-theme-default[data-v-6d012a20] {\n    /*\n        Note font is glitched somewhat\n        The spacing changes when number changes\n    */\n    font-family: 'Helvetica', 'Arial', sans-serif;\n    color: white;\n    text-align: center;\n    text-shadow: 3px 2px black;\n    font-weight: bold;\n}\n.iOdometer[data-v-6d012a20] {\n    font-size: 8em;\n    margin: 0;\n}\n#myBar[data-v-6d012a20] {\n    width: 0;\n    height: 30px;\n    background-color: #4CAF50;\n    text-align: center; /* To center it horizontally (if you want) */\n    line-height: 30px; /* To center it vertically */\n    color: white;\n    font-family: 'Helvetica', 'Arial', sans-serif;\n    font-weight: bold;\n}\n#myProgress[data-v-6d012a20] {\n    background-color: #f7f7f7;\n    box-shadow: 3px 2px black;\n    max-width: 300px;\n}\n.upper[data-v-6d012a20] {\n    font-family: 'Helvetica', 'Arial', sans-serif;\n    color: white;\n    text-shadow: 3px 2px black;\n    font-weight: bold;\n    font-size: 3em;\n}\n\n", ""]);
 
 /***/ }),
 /* 38 */

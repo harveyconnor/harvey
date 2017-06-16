@@ -38,6 +38,7 @@
         color: white;
         text-shadow: 3px 2px black;
         font-weight: bold;
+        font-size: 3em;
     }
 
 </style>
