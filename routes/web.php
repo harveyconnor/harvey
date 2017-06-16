@@ -9,6 +9,7 @@ Route::get('/about', function () {
 })->name('about');
 
 Route::get('/youtube/{channel}', 'YouTubeController@index')->name('youtube.index');
+//Route::get('/youtube/{channel}/goal', 'YouTubeController@goal')->name('youtube.index');
 Route::get('/youtube/{channel}/theme', 'YouTubeController@indexThemed')->name('youtube.theme');
 Route::get('/youtube/{channel}/data', 'YouTubeController@getChannelData')->name('youtube.data');
 Route::get('/youtube/{channel}/live', 'YouTubeController@subscriberCount')->name('youtube.live');

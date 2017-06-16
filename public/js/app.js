@@ -2186,6 +2186,31 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2195,7 +2220,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     props: ['channel'],
     data: function data() {
         return {
-            subscribers: 0
+            subscribers: 0,
+            goal: 54450
         };
     },
 
@@ -2204,6 +2230,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             $.get('/youtube/' + this.channel + '/live', function (response) {
                 this.subscribers = parseInt(response);
             }.bind(this));
+        }
+    },
+    computed: {
+        progress: function progress() {
+            var progress = 0;
+            if (this.subscribers / this.goal > 1) {
+                progress = 1;
+            } else {
+                progress = this.subscribers / this.goal;
+            }
+            progress = progress.toFixed(2);
+
+            $("#myBar").width(progress * 100 + "%");
+
+            return progress;
         }
     },
     created: function created() {
@@ -5813,7 +5854,7 @@ exports.push([module.i, "\n/* The Modal (background) */\n.modal {\n    display: 
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(8)();
-exports.push([module.i, "\n.odometer.odometer-theme-default[data-v-6d012a20] {\n    /*\n        Note font is glitched somewhat\n        The spacing changes when number changes\n    */\n    font-family: 'Helvetica', 'Arial', sans-serif;\n    color: white;\n    text-align: center;\n    text-shadow: 3px 2px black;\n    font-weight: bold;\n}\n.iOdometer[data-v-6d012a20] {\n    font-size: 8em;\n    margin: 0;\n}\n", ""]);
+exports.push([module.i, "\n.odometer.odometer-theme-default[data-v-6d012a20] {\n    /*\n        Note font is glitched somewhat\n        The spacing changes when number changes\n    */\n    font-family: 'Helvetica', 'Arial', sans-serif;\n    color: white;\n    text-align: center;\n    text-shadow: 3px 2px black;\n    font-weight: bold;\n}\n.iOdometer[data-v-6d012a20] {\n    font-size: 8em;\n    margin: 0;\n}\n#myBar[data-v-6d012a20] {\n    width: 0;\n    height: 30px;\n    background-color: #4CAF50;\n    text-align: center; /* To center it horizontally (if you want) */\n    line-height: 30px; /* To center it vertically */\n    color: white;\n    font-family: 'Helvetica', 'Arial', sans-serif;\n    font-weight: bold;\n}\n#myProgress[data-v-6d012a20] {\n    background-color: #f7f7f7;\n    border: 2px #e3e3e3 solid;\n}\n\n", ""]);
 
 /***/ }),
 /* 38 */
@@ -33512,6 +33553,30 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "iOdometer",
     attrs: {
       "value": _vm.subscribers
+    }
+  }), _vm._v(" "), _c('div', {
+    attrs: {
+      "id": "myProgress"
+    }
+  }, [_c('div', {
+    attrs: {
+      "id": "myBar"
+    }
+  }, [_vm._v(_vm._s(_vm.progress * 100) + "%")])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h1', [_vm._v("Sub Goal: " + _vm._s(_vm.goal))]), _vm._v(" "), _c('br'), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.goal),
+      expression: "goal"
+    }],
+    domProps: {
+      "value": (_vm.goal)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.goal = $event.target.value
+      }
     }
   })], 1)
 },staticRenderFns: []}
