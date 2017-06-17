@@ -41,6 +41,17 @@
         font-size: 3em;
     }
 
+    .under
+    {
+        position:absolute;
+        z-index:-1;
+    }
+    .over
+    {
+        position:absolute;
+        z-index:0;
+    }
+
 </style>
 <template>
     <div>
@@ -53,6 +64,8 @@
             <div id="myBar">{{ progress * 100 }}%</div>
         </div>
         <h1 class="upper">Sub Goal: {{ goal.toLocaleString() }}</h1>
+        <img src="/img/kronos2.png" class="over" id="mugShot">
+        <img src="/img/kronos1.png" class="under">
     </div>
 </template>
 
@@ -80,12 +93,17 @@
                 let progress = 0;
                 if ((this.subscribers - this.start) / (this.goal - this.start) > 1) {
                     progress = 1;
-                } else {
+                }
+                else if ((this.subscribers - this.start) / (this.goal - this.start) < 0) {
+                    progress = 0;
+                }
+                else {
                     progress = (this.subscribers - this.start) / (this.goal - this.start);
                 }
                 progress = progress.toFixed(2);
 
                 $("#myBar").width(progress * 100 + "%");
+                $("#mugShot").css('opacity', progress);
 
                 return progress;
             },

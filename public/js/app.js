@@ -12486,6 +12486,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -12511,12 +12524,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var progress = 0;
             if ((this.subscribers - this.start) / (this.goal - this.start) > 1) {
                 progress = 1;
+            } else if ((this.subscribers - this.start) / (this.goal - this.start) < 0) {
+                progress = 0;
             } else {
                 progress = (this.subscribers - this.start) / (this.goal - this.start);
             }
             progress = progress.toFixed(2);
 
             $("#myBar").width(progress * 100 + "%");
+            $("#mugShot").css('opacity', progress);
 
             return progress;
         }
@@ -16201,7 +16217,7 @@ exports.push([module.i, "\n.odometer.odometer-theme-default[data-v-3c420b2e] {\n
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(4)();
-exports.push([module.i, "\n.odometer.odometer-theme-default[data-v-6d012a20] {\n    /*\n        Note font is glitched somewhat\n        The spacing changes when number changes\n    */\n    font-family: 'Helvetica', 'Arial', sans-serif;\n    color: white;\n    text-align: center;\n    text-shadow: 3px 2px black;\n    font-weight: bold;\n}\n.iOdometer[data-v-6d012a20] {\n    font-size: 8em;\n    margin: 0;\n}\n#myBar[data-v-6d012a20] {\n    width: 0;\n    height: 30px;\n    background-color: #4CAF50;\n    text-align: center; /* To center it horizontally (if you want) */\n    line-height: 30px; /* To center it vertically */\n    color: white;\n    font-family: 'Helvetica', 'Arial', sans-serif;\n    font-weight: bold;\n}\n#myProgress[data-v-6d012a20] {\n    background-color: #f7f7f7;\n    box-shadow: 3px 2px black;\n    max-width: 400px;\n}\n.upper[data-v-6d012a20] {\n    font-family: 'Helvetica', 'Arial', sans-serif;\n    color: white;\n    text-shadow: 3px 2px black;\n    font-weight: bold;\n    font-size: 3em;\n}\n\n", ""]);
+exports.push([module.i, "\n.odometer.odometer-theme-default[data-v-6d012a20] {\n    /*\n        Note font is glitched somewhat\n        The spacing changes when number changes\n    */\n    font-family: 'Helvetica', 'Arial', sans-serif;\n    color: white;\n    text-align: center;\n    text-shadow: 3px 2px black;\n    font-weight: bold;\n}\n.iOdometer[data-v-6d012a20] {\n    font-size: 8em;\n    margin: 0;\n}\n#myBar[data-v-6d012a20] {\n    width: 0;\n    height: 30px;\n    background-color: #4CAF50;\n    text-align: center; /* To center it horizontally (if you want) */\n    line-height: 30px; /* To center it vertically */\n    color: white;\n    font-family: 'Helvetica', 'Arial', sans-serif;\n    font-weight: bold;\n}\n#myProgress[data-v-6d012a20] {\n    background-color: #f7f7f7;\n    box-shadow: 3px 2px black;\n    max-width: 400px;\n}\n.upper[data-v-6d012a20] {\n    font-family: 'Helvetica', 'Arial', sans-serif;\n    color: white;\n    text-shadow: 3px 2px black;\n    font-weight: bold;\n    font-size: 3em;\n}\n.under[data-v-6d012a20]\n{\n    position:absolute;\n    z-index:-1;\n}\n.over[data-v-6d012a20]\n{\n    position:absolute;\n    z-index:0;\n}\n\n", ""]);
 
 /***/ }),
 /* 43 */,
@@ -33714,7 +33730,18 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_vm._v(_vm._s(_vm.progress * 100) + "%")])]), _vm._v(" "), _c('h1', {
     staticClass: "upper"
-  }, [_vm._v("Sub Goal: " + _vm._s(_vm.goal.toLocaleString()))])], 1)
+  }, [_vm._v("Sub Goal: " + _vm._s(_vm.goal.toLocaleString()))]), _vm._v(" "), _c('img', {
+    staticClass: "over",
+    attrs: {
+      "src": "/img/kronos2.png",
+      "id": "mugShot"
+    }
+  }), _vm._v(" "), _c('img', {
+    staticClass: "under",
+    attrs: {
+      "src": "/img/kronos1.png"
+    }
+  })], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
