@@ -14,6 +14,9 @@ Route::get('/youtube/{channel}/theme', 'YouTubeController@indexThemed')->name('y
 Route::get('/youtube/{channel}/data', 'YouTubeController@getChannelData')->name('youtube.data');
 Route::get('/youtube/{channel}/live', 'YouTubeController@subscriberCount')->name('youtube.live');
 
+Route::get('/twitch', 'TwitchController@showLiveFollowers');
+Route::get('/twitch/live', 'TwitchController@getFollowers');
+
 //Route::get('/gallery/web', function () {
 //    return view('gallery.web');
 //})->name('gallery.web');
